@@ -1,0 +1,24 @@
+name: Deploy QR Code Solution
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "qr-code/qr-code-solution"
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
