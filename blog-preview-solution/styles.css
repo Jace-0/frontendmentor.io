@@ -122,11 +122,13 @@ img {
 }
 
 .learn {
+    display: flex;
     background: var(--Yellow);
     inline-size: 5.125rem;
     height: 1.8125rem ;
-    text-align: center;
     font-weight: var(--fw-bold);
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -169,7 +171,14 @@ h2 {
     /* transform: translateY(-5px) */
 }
 
-h1:hover,
-h1:focus-visible{
+a {
+  text-decoration: none;
+  color: inherit;
+
+}
+a:hover,
+a:focus-visible{
   color: var(--Yellow);
+  text-decoration: none;
+
 }
