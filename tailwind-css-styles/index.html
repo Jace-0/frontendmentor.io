@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style type="text/tailwindcss">
+
+      /* CSS Reset and Base Styles */
+      @layer base {
+        :root {
+        --ff-sans: "Poppins", sans-serif;
+
+        --fw-light: 200;
+        --fw-normal: 400;
+        --fw-bold: 600;
+
+        --fs-400: 0.9375rem;
+        --fs-500: 1.25rem;
+        --fs-600: 1.625rem;
+        --fs-900: 2.5rem;
+
+        --clr-neutral-900: hsl(234, 12%, 34%);
+        --clr-neutral-400: hsl(212, 6%, 44%);
+        --clr-neutral-100: hsl(0, 0%, 100%);
+
+        --clr-teal: hsl(180, 58%, 56%);
+        --clr-red: hsl(0, 70%, 60%);
+        --clr-blue: hsl(212, 75%, 65%);
+        --clr-yellow: hsl(34, 89%, 65%);
+        }
+
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+        
+        html {
+          font-family: var(--ff-sans);
+          font-weight: var(--fw-normal);
+          line-height: 1.7;
+          color: var(--clr-neutral-400);
+        }
+        
+        body {
+          margin: 0;
+          /* padding: 0; */
+          padding-block-end: 5rem;
+        }
+
+         h1, h2, h3 {
+          color: var(--clr-neutral-900);
+          line-height: 1.3;
+          margin: 0;
+        }
+
+      }
+
+      /* Reusable Component Classes - WITH responsive behaviour*/
+      @layer components {
+        .wrapper {
+            margin-inline: auto;
+            max-inline-size: 1100px;
+            padding-inline: 2rem;
+        }
+
+        .layout-grid {
+            --gap: 2rem;
+            display: grid;
+            grid-auto-columns: 1fr;
+            gap: var(--gap);
+        }
+
+        .col {
+            display: grid;
+            align-content: center;
+            gap: var(--gap);
+        }
+
+        .card {
+            --br: 0.325rem;
+            border-top: var(--br) solid;
+            border-radius: var(--br);
+            padding: 2rem;
+            box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
+        }
+
+        .card__img {
+            display: block;
+            margin-left: auto;
+            margin-top: 2rem;
+        }
+
+        h1 {
+            font-size: var(--fs-600);
+        }
+
+        @media (min-width: 800px) {
+            .layout-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .col {
+            display:  grid;
+            align-content: center;
+            gap: var(--gap);
+        }
+
+              /* .layout-grid .col:nth-child(1) {
+                grid-column: 1;
+                grid-row: 1 / 3;
+            }
+
+            .layout-grid .col:nth-child(2) {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .layout-grid .col:nth-child(3) {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            .layout-grid .col:nth-child(4) {
+                grid-column: 3;
+                grid-row: 1 / 3;
+            } */
+
+      }
+
+      /* Custom Utility Classes */
+      @layer utilities {
+
+        .card__title {
+            font-size: var(--fs-600);
+            font-weight: var(--fw-bold);
+            margin-bottom: 0.5rem;
+        }
+
+        .text-neutral-900 {
+            color: var(--clr-neutral-400)
+        }
+
+        .border-teal {
+            border-color: var(--clr-teal);
+        }
+
+        .border-red {
+            border-color: var(--clr-red);
+        }
+
+        .border-yellow {
+            border-color: var(--clr-yellow);
+        }
+
+        .border-blue {
+            border-color: var(--clr-blue);
+        }
+
+      }
+
+    </style>
+    <title>Four Card</title>
+</head>
+<body>
+
+    <header class="my-[6rem]">
+        <div class="wrapper text-center max-w-[550px]">
+            <h1 class=" font-(--fw-light) mb-[1rem] ">Reliable, efficient delivery <br><span class="font-(--fw-bold)">Powered by Technology</span></h1>
+            <p class="text-(length: --fs-500)">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="layout-grid">
+
+                <div class="col">
+                    <div class="card border-teal">
+                        <h2 class="card__title">Supervisor</h2>
+                        <p>Monitors activity to identify project roadblocks</p>
+                        <img class="card__img" src="../four/images/icon-supervisor.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card border-red">
+                        <h2 class="card__title">Team Builder</h2>
+                        <p>Scans our talent network to create the optimal team for your project</p>
+                        <img class="card__img" src="../four/images/icon-team-builder.svg" alt="">
+                    </div>
+
+                    <div class="card border-yellow">
+                        <h2 class="card__title">Karma</h2>
+                        <p>Regularly evaluates our talent to ensure quality</p>
+                        <img class="card__img" src="../four/images/icon-karma.svg" alt="">
+                    </div>
+
+                </div>
+
+                <!-- <div class="col"> 
+                    <div class="card border-yellow">
+                        <h2 class="card__title">Karma</h2>
+                        <p>Regularly evaluates our talent to ensure quality</p>
+                        <img class="card__img" src="../four/images/icon-karma.svg" alt="">
+                    </div>
+                </div> -->
+
+                <div class="col">
+                    <div class="card border-blue">
+                        <h2 class="card__title">Calculator</h2>
+                        <p>Uses data from past project to provide better delivery estimates</p>
+                        <img class="card__img" src="../four/images/icon-calculator.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- <h1 class="text-3xl font-bold underline text-clifford">
+      Hello world!
+    </h1> -->
+    
+</body>
+</html>

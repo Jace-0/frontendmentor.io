@@ -7,3 +7,5 @@
 [social-links-profile-solution](https://jace-0.github.io/frontendmentor.io/social-links-profile-solution/)
 
 [recipe-page-solution](https://jace-0.github.io/frontendmentor.io/recipe-page-solution/)
+
+[product-preview-card-solution](https://jace-0.github.io/frontendmentor.io/product-preview-card-solution/)
