@@ -9,3 +9,7 @@
 [recipe-page-solution](https://jace-0.github.io/frontendmentor.io/recipe-page-solution/)
 
 [product-preview-card-solution](https://jace-0.github.io/frontendmentor.io/product-preview-card-solution/)
+
+[Four card feature section](https://jace-0.github.io/frontendmentor.io/four/)
+
+[testimonials-grid-section-main](https://jace-0.github.io/frontendmentor.io/testimonials-grid-section-main/)
