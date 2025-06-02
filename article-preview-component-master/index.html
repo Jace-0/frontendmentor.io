@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+
+  <main>
+    <article class="wrapper">
+      <img class="drawers" src="./images/drawers.jpg" alt="img-drawer">
+
+      <div class="content">
+        <h1>  Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+        <p>  Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+
+        <div class="info">
+          <div class="person">
+            <img class="michelle" src="./images/avatar-michelle.jpg" alt="">
+            <div class="person-details">
+              <h2>Michelle Appleton</h2>
+              <p>28 Jun 2020</p>
+            </div>
+          </div>
+  
+          <div class="share-container">
+            <button class="share-btn" aria-label="Share article" onclick="toggleSharePopup()">
+              <img class="share-icon" src="./images/icon-share.svg" alt="Share" width="15" height="13">
+            </button>
+
+            <div class="share-popup" id="sharePopup">
+              <span>Share</span>
+
+              <div class="social-links">
+                <a href="#" aria-label="Share on Facebook">
+                  <img src="./images/icon-facebook.svg" alt="icon-facebook">
+                </a>
+                <a href="#" aria-label="Share on Twitter">
+                  <img src="./images/icon-twitter.svg" alt="icon-twitter">
+                </a>
+                <a href="#" aria-label="Share on Pinterest">
+                 <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+<script>
+    function toggleSharePopup() {
+      const shareBtn = document.querySelector('.share-btn');
+      const sharePopup = document.getElementById('sharePopup');
+      const info = document.querySelector('.info');
+      
+      // Toggle active state on button
+      shareBtn.classList.toggle('active');
+      
+      // Toggle popup visibility
+      sharePopup.classList.toggle('show');
+      
+      // For mobile: hide the info section when popup is shown
+      // if (window.innerWidth <= 768) {
+      //   info.classList.toggle('hidden');
+      // }
+    }
+
+    // Close popup when clicking outside
+    document.addEventListener('click', function(event) {
+      const shareContainer = document.querySelector('.share-container');
+      const sharePopup = document.getElementById('sharePopup');
+      const shareBtn = document.querySelector('.share-btn');
+      const info = document.querySelector('.info');
+      
+      // If click is outside the share container and popup is open
+      if (!shareContainer.contains(event.target) && sharePopup.classList.contains('show')) {
+        shareBtn.classList.remove('active');
+        sharePopup.classList.remove('show');
+        
+        // For mobile: show the info section again
+        // if (window.innerWidth <= 768) {
+        //   info.classList.remove('hidden');
+        // }
+      }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      const sharePopup = document.getElementById('sharePopup');
+      const info = document.querySelector('.info');
+      
+      // If switching from mobile to desktop while popup is open
+      if (window.innerWidth > 768 && info.classList.contains('hidden')) {
+        info.classList.remove('hidden');
+      }
+    });
+
+    // Optional: Add keyboard support for accessibility
+    document.addEventListener('keydown', function(event) {
+      const sharePopup = document.getElementById('sharePopup');
+      const shareBtn = document.querySelector('.share-btn');
+      const info = document.querySelector('.info');
+      
+      // Close popup on Escape key
+      if (event.key === 'Escape' && sharePopup.classList.contains('show')) {
+        shareBtn.classList.remove('active');
+        sharePopup.classList.remove('show');
+        
+        if (window.innerWidth <= 768) {
+          info.classList.remove('hidden');
+        }
+        
+        // Return focus to share button
+        shareBtn.focus();
+      }
+    });
+  </script>
+</body>
+</html>
