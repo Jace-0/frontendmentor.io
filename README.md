@@ -17,3 +17,5 @@
 [article-preview-component-master](https://jace-0.github.io/frontendmentor.io/article-preview-component-master/)
 
 [newsletter-sign-up-with-success-message-main](https://jace-0.github.io/frontendmentor.io/newsletter-sign-up-with-success-message-main/)
+
+[time-tracking-dashboard-main](https://jace-0.github.io/frontendmentor.io/newsletter-sign-up-with-success-message-main/)
