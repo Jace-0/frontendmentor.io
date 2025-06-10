@@ -19,3 +19,5 @@
 [newsletter-sign-up-with-success-message-main](https://jace-0.github.io/frontendmentor.io/newsletter-sign-up-with-success-message-main/)
 
 [time-tracking-dashboard-main](https://jace-0.github.io/frontendmentor.io/time-tracking-dashboard-main/)
+
+[tip-calculator-app-main](https://jace-0.github.io/frontendmentor.io/tip-calculator-app-main/)

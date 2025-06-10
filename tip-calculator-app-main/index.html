@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <main>
+      <div class="wrapper">
+        <img class="logo" src="./images/logo.svg" alt="">
+
+        <div class="splitter">
+          <div class="bill_left">
+
+            <div class="b">
+              <h1>Bill</h1>
+              <input type="text" placeholder="$$$">
+            </div>
+
+            <div class="tip">
+              <h2>Select Tip %</h2>
+              <div class="tips"> 
+                <button>5%</button>
+                <button>10%</button>
+                <button class="neutral-grey">15%</button>
+                <button>25%</button>
+                <button>50%</button>
+                <input class="custom"  placeholder="CUSTOM">
+              </div>
+            </div>
+
+            <div class="people">
+              <div class="npp">
+                <h2>Number of People</h2>
+                <span>Can't be zero</span>
+              </div>
+              <input class="nP" type="text" placeholder="5">
+            </div>
+          </div>
+
+          <div class="amount_right">
+            <div class="tip_amount">
+              <div class="tip_details">
+                <h2 class="text-white">Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+
+              <div class="tt_tip">
+                <h3><img class="dollar" src="./images/icon-dollar.svg" alt=""> 4.26</h3>
+              </div>
+            </div>
+
+            <div class="total_amount">
+              <div class="total_details">
+                <h2 class="text-white">Total</h2>
+                <p class="text-white">/ person</p>
+              </div>
+
+              <div class="tt_amount">
+                <h3><img class="dollar" src="./images/icon-dollar.svg" alt=""> 32.79</h3>
+              </div>
+
+            </div>
+
+            <button class="reset">RESET</button>
+          </div>
+        </div>
+
+      </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
